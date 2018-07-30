@@ -1,0 +1,18 @@
+[submodule "BEHR-core"]
+	path = BEHR-core
+	url = git@github.com:zxdawn/BEHR-core.git
+[submodule "BEHR-core-utils"]
+	path = BEHR-core-utils
+	url = git@github.com:zxdawn/BEHR-core-utils.git
+[submodule "BEHR-PSM-Gridding"]
+	path = BEHR-PSM-Gridding
+	url = git@github.com:zxdawn/BEHR-PSM-Gridding.git
+[submodule "Matlab-Gen-Utils"]
+	path = Matlab-Gen-Utils
+	url = git@github.com:CohenBerkeleyLab/Matlab-Gen-Utils.git
+[submodule "MatlabPythonInterface"]
+	path = MatlabPythonInterface
+	url = git@github.com:CohenBerkeleyLab/MatlabPythonInterface.git
+[submodule "WRF_Utils"]
+	path = WRF_Utils
+	url = git@github.com:CohenBerkeleyLab/WRF_Utils.git
