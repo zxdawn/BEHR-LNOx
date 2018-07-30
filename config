@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# First see if any of the core environmental variable are set
+if [[ -z "$BEHR" ]];
+then
+    echo "Environmental variable [BEHR] should be set."
+    echo "e.g. export BEHR=*****/BEHR-LNOx"
+    exit 1
+fi
+
+# Second see if paths used in BEHR algorithm are set
+while read -r dir; do
+    if [[ ! -d $dir ]]; then
+        echo "Dir $dir does not exist, creat it automatically now"
+        mkdir -p $dir
+    fi
+done < dirs
+
+if [[ ! -f data/MODIS/Land_Water_Mask_7Classes_UMD.hdf ]]; then
+    echo "Please download Land_Water_Mask_7Classes_UMD.hdf accroding to README"
+    exit 1
+fi
+
+echo "The environmental variable and dirs are set correctly."
+echo "Download data, edit some files and enjoy BEHR-LNOx now!"
