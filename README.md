@@ -85,6 +85,20 @@ check this [BEHR-Automation](https://github.com/zxdawn/BEHR-Automation) which su
 
 If you prefer downloading data by wget from web, please check this link: [MODIS](https://ladsweb.modaps.eosdis.nasa.gov/search/) and [OMI](https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae/how-to-download-data-files-from-https-service-with-wget).
 
+### Check data whether complete
+
+You won't get error while running the script below, if the data is OK.
+```
+myDir = 'data_directory'; %gets directory
+myFiles = dir(fullfile(myDir,'*.hdf')); %gets all hdf files in struct
+for k = 1:length(myFiles)
+  baseFileName = myFiles(k).name;
+  fullFileName = fullfile(myDir, baseFileName);
+  fprintf(1, 'Now reading %s\n', fullFileName);
+  hdfinfo(fullFileName)
+end
+```
+
 ## Modify settings
 
 1. Initialize date_start, date_end, region and DEBUG_LEVEL in `BEHR-core/Read_Data/read_main.m`;
