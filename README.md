@@ -112,15 +112,34 @@ If you don't have permission to change Matlab path, you should add BEHR to Matla
 
 `addpath(genpath('your_BEHR_path'))`
 
-Run `read_main.m` `BEHR_main.m`  and `BEHR_publishing_main.m` in Matlab successively.
+Then, run `read_main.m` `BEHR_main.m`  and `BEHR_publishing_main.m` in Matlab successively.
 
-If you want to run in parallel, please add these lines before running:
+If you want to run in **parallel**, please add these lines before running:
 
 ```
  global onCluster;
  onCluster = true;
  global numThreads;
  numThreads = ??; (?? = your numthreads)
+```
+
+If you meet this error when running `BEHR_main.m`:
+
+```
+rror using psm_wrapper (line 78)
+Undefined variable "py" or class "py.PSM_Main.behr_datasets".
+
+Error in BEHR_main_one_day (line 350)
+OMI = psm_wrapper(Data, Data(1).Grid, 'only_cvm', ~use_psm, 'extra_cvm_fields', extra_gridding_fields, 'DEBUG_LEVEL', DEBUG_LEVEL);
+
+Error in BEHR_main (line 227)
+parfor(j=1:length(datenums), n_workers)
+```
+
+Check this [link](https://www.mathworks.com/help/matlab/matlab_external/undefined-variable-py-or-function-py-command.html). You can create `test.m` under `BEHR-PSM-Gridding` to test whether it works:
+
+```
+py.PSM_Main.behr_datasets('psm')
 ```
 
 ## Check ouput
