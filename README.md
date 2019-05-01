@@ -85,6 +85,8 @@ check this [BEHR-Automation](https://github.com/zxdawn/BEHR-Automation) which su
 
 If you prefer downloading data by wget from web, please check this link: [MODIS](https://ladsweb.modaps.eosdis.nasa.gov/search/) and [OMI](https://disc.gsfc.nasa.gov/information/howto/5761bc6a5ad5a18811681bae/how-to-download-data-files-from-https-service-with-wget).
 
+The website has updated and it's easier to download directly following the [link](https://search.earthdata.nasa.gov/data/status).
+
 ### Check data whether complete
 
 You won't get error while running the script below, if the data is OK.
