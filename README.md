@@ -1,6 +1,12 @@
 # BEHR-LNOx
 
-This repository contains all the utilities needed to run BEHR.
+This repository contains all the utilities needed to run BEHR-LNOx in AMT paper:
+
+Zhang, X., Yin, Y., van der A, R., Lapierre, J. L., Chen, Q., Kuang, X., Yan, S., Chen, J., He, C., and Shi, R.: Estimates of lightning NOx production based on high-resolution OMI NO2 retrievals over the continental US, Atmos. Meas. Tech., 13, 1709–1734, https://doi.org/10.5194/amt-13-1709-2020, 2020.
+
+## How to cite
+
+Zhang, Xin, & Laughner, Joshua. (2019, November 26). zxdawn/BEHR-LNOx: v1.0 (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3553426
 
 ## Clone
 
